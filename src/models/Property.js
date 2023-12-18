@@ -144,6 +144,10 @@ const Property = sequelize.define(
       type: Sequelize.ARRAY(Sequelize.STRING(1000)),
       allowNull: true,
     },
+  locationLinkOfGoogleMap: {
+      type: Sequelize.STRING(500),
+      allowNull: true,
+    },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
   },

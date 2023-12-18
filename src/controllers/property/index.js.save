@@ -1,3 +1,4 @@
+
 const { generateUniqueID } = require('../../utils');
 const propertyService = require('./service');
 const authRole = require('../../middleware/role');
@@ -11,7 +12,7 @@ async function addProperty(req, res) {
     placeAddress: body.placeAddress,
     city: body.city,
     emirate: body.emirate,
-//    locationLinkOfGoogleMap:body.locationLinkOfGoogleMap,
+    locationLinkOfGoogleMap:body.locationLinkOfGoogleMap,
 //    latitude: body.coordinates.lat,
 //    longitude: body.coordinates.lng,
     ...(body.building ? { building: body.building } : {}),
@@ -20,7 +21,6 @@ async function addProperty(req, res) {
   const propertyBody = {
     id: generateUniqueID(),
     title: body.title,
-    locationLinkOfGoogleMap:body.locationLinkOfGoogleMap,
     mainTitle: body.mainTitle,
     description: body.description,
     images: body.images,
