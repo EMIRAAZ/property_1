@@ -14,10 +14,10 @@ const City = sequelize.define(
       allowNull: false,
       primaryKey: true,
     },
-    emirate: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
+//    emirate: {
+//      type: Sequelize.STRING,
+//      allowNull: false,
+ //   },
     createdAt: Sequelize.DATE,
     updatedAt: Sequelize.DATE,
   },
@@ -26,4 +26,7 @@ const City = sequelize.define(
   }
 );
 
+//City.sync().then(()=>{
+//  console.log('user model synced')
+//})
 module.exports = City;
